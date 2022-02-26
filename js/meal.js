@@ -4,6 +4,7 @@ const loadMeals = () => {
     const error = document.getElementById('error')
     if (inputText == '') {
         error.innerText = 'plase insert your food name..'
+        input.value = '';
     } else {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText}`)
             .then(responce => responce.json())
